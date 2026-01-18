@@ -1,73 +1,114 @@
-# React + TypeScript + Vite
+# 🟦 TypeScript Basics
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An educational TypeScript project focused on core language features such as types, interfaces, functions, generics, promises, and HTTP requests.
 
-Currently, two official plugins are available:
+This project is part of a learning series within the **React & Next.js** course.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🔗 Repository
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+👉 [GitHub repository](https://github.com/SerhiiRepinskyi/01-ts-basics)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ What This Project Covers
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+The project consists of **8 independent TypeScript tasks**, each implemented in a separate file.  
+The goal is to practice clean, explicit, and safe typing in TypeScript.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Covered topics include:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Explicit typing of primitive values
+- Interfaces and optional / readonly properties
+- Array typing
+- Function parameter and return types
+- Union types
+- Generics
+- Promise typing
+- Typing HTTP requests with Axios
+
+---
+
+## 🛠 Tech Stack
+
+- **TypeScript**
+- **Vite**
+- **Axios**
+- **Prettier**
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── task-1.ts // Scalar types
+├── task-2.ts // Interfaces
+├── task-3.ts // Arrays typing
+├── task-4.ts // Functions
+├── task-5.ts // Union types
+├── task-6.ts // Generics
+├── task-7.ts // Promises
+├── task-8.ts // HTTP requests (Axios)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Each task is isolated in its own file.
+- No task depends on another.
+- Code is formatted with **Prettier**.
+- Types are explicit and readable.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🧪 Tasks Overview
+
+### Task 1 – Scalar Types
+
+Explicit typing of string, number, and boolean variables.
+
+### Task 2 – Interfaces
+
+Creating and using interfaces with `readonly` and optional properties.
+
+### Task 3 – Arrays
+
+Typing arrays of primitives and objects.
+
+### Task 4 – Functions
+
+Typing function parameters and return types, including optional parameters.
+
+### Task 5 – Union Types
+
+Restricting function input to a fixed set of string literals.
+
+### Task 6 – Generics
+
+Creating a generic function that works with different data types.
+
+### Task 7 – Promises
+
+Typing a function that returns a `Promise<string>`.
+
+### Task 8 – HTTP Requests
+
+Typing Axios GET requests and API responses using interfaces.
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository and run the project locally:
+
+```bash
+npm install
+npm run dev
 ```
+
+---
+
+## 📌 Notes
+
+This is a learning project, not a production application.
+
+The focus is on TypeScript correctness and clarity.
