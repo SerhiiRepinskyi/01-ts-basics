@@ -43,6 +43,8 @@ Covered topics include:
 
 ```text
 src/
+├── main.ts // Application entry point
+├── tasks.ts // Tasks runner
 ├── task-1.ts // Scalar types
 ├── task-2.ts // Interfaces
 ├── task-3.ts // Arrays typing
@@ -104,6 +106,13 @@ Clone the repository and run the project locally:
 npm install
 npm run dev
 ```
+
+Each task can be run independently.
+
+To run a task in development mode:
+
+- open `src/tasks.ts`;
+- uncomment the desired task.
 
 ---
 
